@@ -1,0 +1,41 @@
+  {
+  "model":[
+    {
+      "dataType": "enumeration",
+      "NameType": "storeType",
+      "displayName": "Типы магазинов",
+      "attributes" : [
+            {"number": 0, "name": "Мини-Маркет"},
+            {"number": 1, "name": "Супер-Маркет"},
+            {"number": 2, "name": "Гипер-Маркет"}
+      ]
+    },
+    {
+      "dataType": "baseType",
+      "nameType": "chain",
+      "attributes" : [
+        {"guid": {"displayName": "Koд записи", "type": "int"}},
+        {"name": {"displayName": "Название", "type": "string"}}
+      ]
+    },
+    {
+      "complexType":
+        {
+          "entityName": "stores", "displayName": "Магазины"},
+          "attributes" : [
+              {"guid": { "displayName" : "Koд записи", "type": "int"}},
+              {"name": { "displayName" : "Название сети", "type": "string"}},
+              {"storeType": {
+                         "displayName": "Тип",
+                         "type": "enumValue" ,
+                         "mapping": {"objectName": "storeType", "attribute": "number"}
+                       }
+              },
+              {"chain": {
+                          "displayName": "Торговая сеть",
+                          "type": "baseType",
+                          "mapping": {"objectName": "chain", "attribute": "guid"}}
+              }
+      ]
+    }
+]}

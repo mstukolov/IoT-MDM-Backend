@@ -1,0 +1,33 @@
+{
+  "data":[
+    { "baseType": "chain",
+            "attributes" : [
+                {"guid": {"value": 1000101}},
+                {"name": {"value": "Okey"}}
+    ]},
+    { "baseType": "chain",
+      "attributes" : [
+        {"guid": {"value": 1000103}},
+        {"name": {"value": "Metro"}}
+      ]},
+    {
+      "complexType" : "stores",
+      "attributes" : [
+        { "guid": 100,
+          "name": "Магазин-100",
+          "storeType": 2,
+          "chain": 1000103 }
+      ]
+    },
+    {
+      "complexType" : "stores",
+      "attributes" : [
+        { "guid": 100,
+          "name": "Okey-2",
+          "storeType": 3,
+          "chain": 1000101 }
+      ]
+    }
+
+  ]
+}
